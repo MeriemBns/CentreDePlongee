@@ -1,0 +1,522 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "GT Eesti Pro Display Medium";
+    color: #000;
+    background-color: #f8f8f8;
+}
+
+
+/* Footer */
+footer {
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-top {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.newsletter {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.newsletter .logo {
+    max-width: 100px;
+}
+
+.newsletter-content {
+    flex: 1;
+    margin: 0 20px;
+    text-align: left;
+}
+
+.newsletter-content h2 {
+    margin: 0;
+}
+
+.newsletter-content p {
+    color: #666;
+}
+
+.newsletter-subscribe {
+    display: flex;
+    align-items: center;
+}
+
+.newsletter-subscribe input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.newsletter-subscribe button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.newsletter-subscribe button:hover {
+    background-color: #cc0000;
+}
+
+.footer-bottom {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.footer-section {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+@media (max-width: 766px) {
+    .footer-section .title {
+        padding: 15px 0;
+        margin-bottom: 15px;
+    }
+}
+
+.footer-section .title {
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    font-style: normal;
+
+}
+
+.footer-section .context{
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.footer-section .context .contact{
+    border-left-color: #eb1b23;
+    border-left-width: 3px;
+    padding-left: 20px;
+    border-left-style: solid;
+    margin-bottom: 30px;
+}
+.footer-section .context .contact .c-title{
+    color: #5e6d77;
+    margin-bottom: 10px;
+    display: block;
+    unicode-bidi: isolate;
+}
+.footer-section .context .contact .sub {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 15px;
+    margin-right: -15px;
+    margin-left: -15px;
+    
+    color: #000;
+    font-size: 14px;
+    font-weight: normal;
+
+}
+.footer-links div{
+    position: relative;
+    
+    padding-right: 15px;
+    padding-left: 15px;
+    
+    font-weight: normal;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.footer-links a {
+    text-decoration: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    font-family: "GT Eesti Pro Display Medium";
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+    
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .newsletter-content, .newsletter-subscribe {
+        text-align: center;
+    }
+
+    .newsletter {
+        flex-direction: column;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+/* Footer End*/
+
+
+/* Header */
+.bravo_topbar{
+    background: #043263;
+    color: white;
+}
+@media (max-width: 768px) {
+    .bravo_topbar {
+        display: none;
+    }
+}
+
+.bravo_topbar .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.bravo_topbar .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bravo_topbar .content .topbar-left {
+    font-size: 14px;
+    color: #fff;
+}
+.bravo_topbar .content .socials {
+    display: inline-block;
+}
+.bravo_topbar .content .topbar-left .line {
+    width: 1px;
+    display: inline-block;
+    min-height: 15px;
+    margin: 0 10px;
+    color: #fff;
+    vertical-align: middle;
+    border-left: 1px solid #fff;
+}
+
+.bravo_topbar .content .topbar-left a {
+    color: white;
+    font-weight: 400;
+    font-size: 13px;
+    text-decoration: none;
+}
+.bravo_topbar .content .socials a:first-child {
+    padding-left: 0;
+}
+.bravo_wrap .bravo_topbar .content .socials a:last-child {
+    padding-right: 0;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.fa {
+    display: inline-block;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-variant-alternates: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    font-variant-position: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 1;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 20px;
+    width: 20px;
+}
+
+.bravo_topbar .content .topbar-items {
+    display: inline-block;
+}
+ul {
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+.bravo_topbar .content .socials a {
+    padding-right: 18px;
+}
+
+.bravo_topbar .content .topbar-items li {
+    padding-left: 18px;
+    padding-right: 18px;
+    display: inline-block;
+}
+.bravo_topbar .content .topbar-right .topbar-items li a {
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 400;
+    color: white;
+}
+.flag-icon-fr {
+    background-image: url(https://www.9oss.tn/libs/flags/flags/4x3/fr.svg);
+}
+.flag-icon {
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    position: relative;
+    display: inline-block;
+    width: 1.33333333em;
+    line-height: 1em;
+}
+.flag-icon-gb {
+    background-image: url(https://www.9oss.tn/libs/flags/flags/4x3/gb.svg);
+}
+.flag-icon-tn {
+    background-image: url(https://www.9oss.tn/libs/flags/flags/4x3/tn.svg);
+}
+.bravo_topbar .content .topbar-right .dropdown-menu {
+    right: 0;
+    left: auto !important;
+    min-width: 200px;
+    top: 15px !important;
+    border-radius: 0;
+}
+.bravo_topbar .content .dropdown-menu {
+    background: #000000;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(0, 0, 0);
+    color: white;
+
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+.dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    float: left;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    list-style: none;
+}
+.bravo_topbar .content .dropdown-menu li {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+
+
+.bravo_topbar .content .topbar-right {
+    font-size: 12px;
+}
+
+    /*Menu Header*/
+.bravo_header {
+    background: #f4f5f9;
+    display: block;
+    unicode-bidi: isolate;
+}
+.bravo_header .container {
+    padding-right: 0px;
+    padding-left: 0px;
+    max-width: 100%;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.bravo_header .content {
+    background: #f4f5f9;
+    display: flex;
+    align-items: center;
+    unicode-bidi: isolate;
+}
+@media (max-width: 1023px) {
+    .bravo_header .content .header-left {
+        width: 100%;
+    }
+}
+.bravo_header .content .header-left {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+}
+a.bravo-logo {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+a.bravo-logo img {
+    height: 100%;
+    padding-bottom: 10px;
+    vertical-align: middle;
+    border-style: none;
+    overflow: clip;
+}
+
+@media (max-width: 768px) {
+    .bravo_header .content .header-left .bravo-menu {
+        display: none;
+    }
+}
+.bravo_header .content .header-left .bravo-menu {
+    padding-left: 20px;
+    unicode-bidi: isolate;
+    width: 100%;
+}
+.bravo_header .content .header-left .bravo-menu ul {
+    list-style: none;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+    display: flex;
+    justify-content: center;
+    
+}
+.bravo_header .content .header-left .bravo-menu ul li {
+    display: inline-block;
+    position: relative;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+    justify-content: center;
+    width: 20%;
+}
+.bravo_header .content .header-left .bravo-menu ul li a {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #1A2B48;
+    transition: all 0.3s;
+}
+.bravo_header .content .header-left .bravo-menu a {
+    text-decoration: none;
+}
+.bravo_header .content .header-left .bravo-menu a img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.bravo_header .content .header-left .bravo-menu ul li > .menu-dropdown li {
+    min-width: 210px;
+    list-style: none;
+    list-style-position: initial;
+    list-style-image: initial;
+    list-style-type: none;
+    position: absolute;
+    left: 0;
+    top: 120%;
+    padding-left: 0;
+    margin-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 1px #dbdbdb;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+
+}
+.bravo_header .content .header-left .bravo-menu ul li > .menu-dropdown li {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: block;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+.bravo_header .content .header-left .bravo-menu ul li > .menu-dropdown li:not(:last-child) a {
+    border-bottom: 1px solid #EEEEEE;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(238, 238, 238);
+}
+.bravo_header .content .header-left .bravo-menu ul li > .menu-dropdown li a {
+    padding: 15px 0;
+    display: block;
+    font-size: 14px;
+}
+
+/* Header End*/

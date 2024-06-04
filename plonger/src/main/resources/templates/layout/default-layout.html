@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Centre de plongée</title>
+<script type="text/javascript"></script>
+<link rel="stylesheet" th:href="@{/webjars/bootswatch/dist/flatly/bootstrap.css}">
+<link rel="stylesheet" th:href="@{/style/style.css}" href="">
+</head>
+<body>
+    <!--Header-->
+    <div th:replace="~{fragments/header::header}"></div>
+    <!--Main-->
+    <div class="container" th:insert="~{::content}"></div>
+    <!--Footer-->
+    <div th:replace="~{fragments/footer::footer}"></div>
+
+</body>
+</html>

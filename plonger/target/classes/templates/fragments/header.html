@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <script type="text/javascript"></script>
+  </head>
+  <body>
+    <header>
+      <div class="bravo_topbar">
+        <div class="container">
+          <div class="content">
+            <div class="topbar-left">
+              <div class="socials">
+                <a
+                  href="https://www.facebook.com/9oss.tn"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  ><span class="sr-only">Page d'accueil</span
+                  ><img
+                    class="fa fa-facebook"
+                    th:src="@{/images/logo-facebook-blanc.png}"
+                    alt="Facebook"
+                /></a>
+                <a
+                  href="https://www.instagram.com/9oss.tn"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  ><span class="sr-only">Page d'accueil</span
+                  ><img
+                    class="fa fa-instagram"
+                    th:src="@{/images/logo-inta-blanc.png}"
+                /></a>
+                <a
+                  href="https://www.youtube.com/@9oss_tn"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  ><span class="sr-only">Page d'accueil</span
+                  ><img
+                    class="fa fa-youtube"
+                    th:src="@{/images/logo-youtube-blanc.png}"
+                /></a>
+              </div>
+              <span class="line"></span>
+              <a href="mailto:support@9oss.tn">support@9oss.tn</a>
+            </div>
+            <div class="topbar-right">
+              <ul class="topbar-items">
+                <li>
+                  <a
+                    href="https://www.9oss.tn/page/devenir-prestataire"
+                    class="is_login"
+                    ><img
+                      src="https://www.9oss.tn/uploads/0000/1/2024/04/29/icone-prestataire.png"
+                      style="padding-right: 10px"
+                    />Devenir Prestataire</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.9oss.tn/page/devenir-vendeur"
+                    class="is_login"
+                    ><img
+                      src="https://www.9oss.tn/uploads/0000/1/2024/04/29/icone-vendeurs.png"
+                      style="padding-right: 10px"
+                    />Devenir Vendeur</a
+                  >
+                </li>
+                <li class="dropdown">
+                  <a href="#" data-toggle="dropdown" class="is_login">
+                    <span class="flag-icon flag-icon-fr"></span>
+                    Francais
+                    <i class="fa fa-angle-down"></i>
+                  </a>
+                  <ul class="dropdown-menu text-left">
+                    <li>
+                      <a
+                        href="https://www.9oss.tn/aventure-nautique/plongee-tunisie?set_lang=en"
+                        class="is_login"
+                      >
+                        <span class="flag-icon flag-icon-gb"></span>
+                        English
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.9oss.tn/aventure-nautique/plongee-tunisie?set_lang=ar"
+                        class="is_login"
+                      >
+                        <span class="flag-icon flag-icon-tn"></span>
+                        Arabe
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="login-item">
+                  <a
+                    href="#login"
+                    data-toggle="modal"
+                    data-target="#login"
+                    class="login"
+                    >Connexion</a
+                  >
+                </li>
+                <li class="signup-item">
+                  <a
+                    href="#register"
+                    data-toggle="modal"
+                    data-target="#register"
+                    class="signup"
+                    >Inscription</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bravo_header">
+        <div class="container">
+          <div class="content">
+            <div class="header-left">
+              <a
+                href="https://www.9oss.tn"
+                class="bravo-logo"
+                style="display: flex; justify-content: center"
+              >
+                <img
+                  src="https://www.9oss.tn/uploads/0000/1/2024/04/13/700-couleur.svg"
+                  alt="9oss.tn"
+                  width="70%"
+                  height="90px"
+                />
+              </a>
+              <div class="bravo-menu ">
+                <ul class="main-menu menu-generated">
+                  <li class="dropdown depth-0">
+                    <a href="#" data-toggle="dropdown"
+                      ><img
+                        src="https://www.9oss.tn/uploads/0000/1/2024/04/18/aventures-nautique.png"
+                        style="width: 30px; height: 30px"
+                        alt="Aventures Nautiques 9oss.tn" /><i
+                        class="fa fa-angle-down"
+                        style="color: #f4f5f9"
+                        ><span
+                          style="
+                            color: black;
+                            font-weight: bolder;
+                            padding-right: 10px;
+                          "
+                        >
+                          Aventures Nautiques</span
+                        ></i
+                      ><i class="caret fa fa-angle-down"></i
+                    ></a>
+                    
+                  </li>
+                  <li class="dropdown depth-0">
+                    <a href="#" data-toggle="dropdown"
+                      ><img
+                        src="https://www.9oss.tn/uploads/0000/1/2024/04/18/aventure-mecanique.png"
+                        style="width: 30px; height: 30px"
+                        alt="Aventures Mécaniques 9oss.tn" /><i
+                        class="fa fa-angle-down"
+                        style="color: #f4f5f9"
+                        ><span
+                          style="
+                            color: black;
+                            font-weight: bolder;
+                            padding-right: 10px;
+                          "
+                        >
+                          Aventures Mécaniques</span
+                        ></i
+                      ><i class="caret fa fa-angle-down"></i
+                    ></a>
+                    
+                  </li>
+                  <li class="dropdown depth-0">
+                    <a href="#" data-toggle="dropdown"
+                      ><img
+                        src="https://www.9oss.tn/uploads/0000/1/2024/04/18/excursion.png"
+                        style="width: 30px; height: 30px"
+                        alt="Excursions 9oss.tn" /><i
+                        class="fa fa-angle-down"
+                        style="color: #f4f5f9"
+                        ><span
+                          style="
+                            color: black;
+                            font-weight: bolder;
+                            padding-right: 10px;
+                          "
+                        >
+                          Excursions</span
+                        ></i
+                      ><i class="caret fa fa-angle-down"></i
+                    ></a>
+                    
+                  </li>
+                  <li class="dropdown depth-0">
+                    <a target="" href="/event"
+                      ><img
+                        src="https://www.9oss.tn/uploads/0000/1/2024/04/18/evenements.png"
+                        style="width: 30px; height: 30px; margin-right: 10px"
+                        alt="Evènements 9oss.tn"
+                      />Evènements</a
+                    >
+                  </li>
+                  <li class="dropdown depth-0">
+                    <a target="" href="/contact"
+                      ><img
+                        src="https://www.9oss.tn/uploads/0000/1/2024/03/21/contact.webp"
+                        style="width: 30px; height: 30px; margin-right: 10px"
+                        alt="Contact 9oss.tn"
+                      />Contact</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bravo-menu-mobile" style="display: none">
+          <div class="user-profile">
+            <div class="b-close"><i class="icofont-scroll-left"></i></div>
+            <div class="avatar"></div>
+            <ul>
+              <li>
+                <a
+                  href="#login"
+                  data-toggle="modal"
+                  data-target="#login"
+                  class="login"
+                  >Connexion</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#register"
+                  data-toggle="modal"
+                  data-target="#register"
+                  class="signup"
+                  >Inscription</a
+                >
+              </li>
+            </ul>
+            <ul>
+              <li class="dropdown depth-0">
+                <a target="" href="https://www.9oss.tn/page/devenir-vendeur"
+                  ><img
+                    src="https://www.9oss.tn/uploads/0000/1/2024/04/26/icone-vendeur-mobile.png"
+                    style="width: 30px; height: 30px; margin-right: 10px"
+                    alt="Devenir Vendeur"
+                  />Devenir Vendeur</a
+                >
+              </li>
+              <li class="dropdown depth-0">
+                <a target="" href="https://www.9oss.tn/page/devenir-prestataire"
+                  ><img
+                    src="https://www.9oss.tn/uploads/0000/1/2024/04/26/icone-prestataire-mobile.png"
+                    style="width: 30px; height: 30px; margin-right: 10px"
+                    alt="Devenir Prestataire"
+                  />Devenir Prestataire</a
+                >
+              </li>
+            </ul>
+            <ul class="multi-lang">
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="is_login">
+                  <span class="flag-icon flag-icon-fr"></span>
+                  Francais
+                  <i class="fa fa-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu text-left">
+                  <li>
+                    <a
+                      href="https://www.9oss.tn/aventure-nautique/plongee-tunisie?set_lang=en"
+                      class="is_login"
+                    >
+                      <span class="flag-icon flag-icon-gb"></span>
+                      English
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.9oss.tn/aventure-nautique/plongee-tunisie?set_lang=ar"
+                      class="is_login"
+                    >
+                      <span class="flag-icon flag-icon-tn"></span>
+                      Arabe
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="g-menu" style="max-height: 593px">
+            <ul class="main-menu menu-generated" style="max-height: 593px;">
+              <li class="dropdown depth-0">
+                <a href="#" data-toggle="dropdown">
+                  <img
+                    src="https://www.9oss.tn/uploads/0000/1/2024/04/18/aventures-nautique.png"
+                    style="width: 30px; height: 30px; margin-right: 10px"
+                    alt="Aventures Nautiques 9oss.tn"
+                  />
+                  <i class="fa fa-angle-down" style="color: #f4f5f9"
+                    ><span
+                      style="
+                        color: black;
+                        font-weight: bolder;
+                        padding-right: 10px;
+                      "
+                    >
+                      Aventures Nautiques</span
+                    ></i
+                  >
+                  <i class="caret fa fa-angle-down"></i>
+                </a>
+                
+              </li>
+              <li class="dropdown depth-0">
+                <a href="#" data-toggle="dropdown"
+                  ><img
+                    src="https://www.9oss.tn/uploads/0000/1/2024/04/18/aventure-mecanique.png"
+                    style="width: 30px; height: 30px; margin-right: 10px"
+                    alt="Aventures Mécaniques 9oss.tn" /><i
+                    class="fa fa-angle-down"
+                    style="color: #f4f5f9"
+                    ><span
+                      style="
+                        color: black;
+                        font-weight: bolder;
+                        padding-right: 10px;
+                      "
+                    >
+                      Aventures Mécaniques</span
+                    ></i>
+                    <i class="caret fa fa-angle-down"></i>
+                </a>
+                  
+              </li>
+              <li class="dropdown depth-0">
+                <a href="#" data-toggle="dropdown"
+                  ><img
+                    src="https://www.9oss.tn/uploads/0000/1/2024/04/18/excursion.png"
+                    style="width: 30px; height: 30px; margin-right: 10px"
+                    alt="Excursions 9oss.tn" /><i
+                    class="fa fa-angle-down"
+                    style="color: #f4f5f9"
+                    ><span
+                      style="
+                        color: black;
+                        font-weight: bolder;
+                        padding-right: 10px;
+                      "
+                    >
+                      Excursions</span
+                    ></i
+                  ><i class="caret fa fa-angle-down"></i
+                ></a>
+                
+              </li>
+              <li class="dropdown depth-0">
+                <a target="" href="/event"
+                  ><img
+                    src="https://www.9oss.tn/uploads/0000/1/2024/04/18/evenements.png"
+                    style="width: 30px; height: 30px; margin-right: 10px"
+                    alt="Evènements 9oss.tn"
+                  />
+                  <span
+                      style="
+                        color: black;
+                        font-weight: bolder;
+                        padding-right: 10px;
+                      "
+                    >Evènements
+                    </span>
+                    </a
+                >
+              </li>
+              <li class="dropdown depth-0">
+                <a target="" href="/contact"
+                  ><img
+                    src="https://www.9oss.tn/uploads/0000/1/2024/03/21/contact.webp"
+                    style="width: 30px; height: 30px; margin-right: 10px"
+                    alt="Contact 9oss.tn"
+                  />
+                  <span
+                      style="
+                        color: black;
+                        font-weight: bolder;
+                        padding-right: 10px;
+                      "
+                    >Contact
+                    </span>
+                    </a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

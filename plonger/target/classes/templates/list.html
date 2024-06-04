@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Place List</title>
+  <link th:replace="layout/default-layout::link">
+  <link rel="stylesheet" th:href="@{/style/list-style.css}" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/icofont/1.0.1/css/icofont.min.css">
+
+
+  <script>
+    document.querySelector('.smart-search-location').addEventListener('input', function () {
+      const options = JSON.parse(this.getAttribute('data-default'));
+      const selectedValue = this.value;
+      const matchedOption = options.find(option => option.title.trim() === selectedValue.trim());
+
+      if (matchedOption) {
+        document.querySelector('.child_id').value = matchedOption.id;
+      } else {
+        document.querySelector('.child_id').value = '';
+      }
+    });
+  </script>
+
+</head>
+
+<body th:replace="layout/default-layout::body">
+
+  <div th:fragment="content" class="list-container">
+    <div class="bravo_search_tour">
+      <div class="bravo_banner"
+        style="background-image: url(https://www.9oss.tn/uploads/0000/1/2024/04/25/banner-plongee-tunisie-9oss-tn.webp)">
+        <div class="container">
+          <h1>
+            <!-- Liste des Circuits en Tunisie - Explorez les Trésors de la Tunisie -->
+            Meilleures Excursions Plongée en Tunisie
+          </h1>
+        </div>
+      </div>
+      <div class="bravo_form_search">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <form th:action="@{/geocode}" class="form bravo_form" method="get">
+                <div class="g-field-search">
+                  <div class="row">
+
+                    <div class="col-md-10 border-right">
+                      <div class="form-group">
+                        <img class="icon field-icon fa icofont-map" th:src="@{/images/map.svg}" alt="Map Icon">
+                        <div class="form-content">
+                          <label>Lieu</label>
+                          <div class="smart-search">
+                            <input type="text" class="smart-search-location parent_text form-control" id="filter"
+                              name="filter" placeholder="Où allez-vous?" value="" list="locations"
+                              data-onload="Chargement..."
+                              data-default="[{&quot;id&quot;:9,&quot;title&quot;:&quot; Djerba&quot;},{&quot;id&quot;:10,&quot;title&quot;:&quot; Zarzis&quot;},{&quot;id&quot;:11,&quot;title&quot;:&quot; Tozeur&quot;},{&quot;id&quot;:12,&quot;title&quot;:&quot; Tataouine&quot;},{&quot;id&quot;:13,&quot;title&quot;:&quot; Douz&quot;}]">
+                            <datalist id="locations">
+                              <option value="Djerba">
+                              <option value="Zarzis">
+                              <option value="Tozeur">
+                              <option value="Tataouine">
+                              <option value="Douz">
+                            </datalist>
+                            <input type="hidden" class="child_id" value="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="g-button-submit">
+                  <button class="btn btn-primary btn-search" type="submit">Recherche</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="row">
+
+          <div class="col col-md-12">
+            <div class="bravo-list-item">
+              <div class="topbar-search">
+
+                <h2 class="text"
+                  th:text="${places.size() < 2 ? places.size() + ' resultat' : places.size() + ' resultats'}">
+                </h2>
+
+              </div>
+              <div class="list-item">
+                <div class="row">
+                  <div class="col-lg-4 col-md-6 items" th:each="place:${places}">
+                    <div class="item-tour ">
+                      <div class="thumb-image">
+
+                        <a href="#">
+                          <img th:if="${place.photoUrl!=null}" class="img-responsive lazy loaded"
+                            th:src="${place.photoUrl}" data-was-processed="true">
+                          <img th:if="${place.photoUrl==null}" class="img-responsive lazy loaded"
+                            th:src="@{/images/No-Image.jpg}" data-was-processed="true">
+                        </a>
+
+                      </div>
+                      <div class="location">
+                        <img th:src="@{/images/icon-paper-plane.png}" class="icofont-paper-plane"></img>
+                        <span th:text="${place.type}"></span>
+                      </div>
+                      <div class="item-title">
+                        <a href="#" th:text="${place.title}">
+                        </a>
+                      </div>
+                      <div class="service-review tour-review-5.0">
+                        <span th:text="${place.rating}"></span>
+                        <img th:src="@{/images/icon-star.png}" alt="star">
+                      </div>
+                      <div class="info-list">
+                        <div class="info">
+                          <h5><img th:src="@{/images/marker.png}" class="icon-list">Adresse: </h5>
+                          <p th:text="${place.address}"></p><br>
+                        </div>
+                        <div class="info">
+                          <h5><img th:src="@{/images/icon-phone.png}" class="icon-list">Téléphone: </h5>
+                          <p th:text="${place.phoneNumber}"></p><br>
+                        </div>
+                        <div class="info" th:if="${place.website!=null}">
+                          <h5><img th:src="@{/images/icon-web.png}" class="icon-list">Site web: </h5>
+                          <a th:href="${place.website}">
+                            <p th:text="${place.website}"></p>
+                          </a><br>
+                        </div>
+                        <div class="info" th:if="${place.serviceOptions!=null}">
+                          <h5><img th:src="@{/images/optional-icon.png}" class="icon-list">Services optionnels: </h5>
+                          <br />
+                          <p th:text="${place.address}"><span class="fr_text" th:each="service:${place.serviceOptions}"
+                              th:text="${service} + ' - '"></span></p><br>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
